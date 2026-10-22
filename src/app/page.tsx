@@ -1,5 +1,5 @@
-import { StoryOrchestrator } from '@/components/apple/StoryOrchestrator';
+import { DSALearningPlatform } from '@/components/dsa/DSALearningPlatform';
 
 export default function Home() {
-  return <StoryOrchestrator />;
+  return <DSALearningPlatform />;
 }

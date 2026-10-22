@@ -1,6 +1,6 @@
 'use client';
 
-import React, { useState, useEffect, useRef, useCallback } from 'react';
+import React, { useState, useEffect, useCallback } from 'react';
 import { StartupExperience } from './StartupExperience';
 import { NavigationOverlay } from './NavigationOverlay';
 import { QROverlay } from './QROverlay';

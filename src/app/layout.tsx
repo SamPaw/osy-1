@@ -26,20 +26,20 @@ export const viewport: Viewport = {
 };
 
 export const metadata: Metadata = {
-  title: "Page Replacement Algorithms — FIFO vs LRU",
+  title: "DSA Visual Lab — Data Structures & Algorithms Using C",
   description:
-    "An Apple-inspired interactive educational experience for Operating Systems. Explore FIFO and LRU page replacement algorithms, physical memory dynamics, and Belady's anomaly.",
+    "An Apple-inspired interactive educational laboratory for Data Structures & Algorithms (MIT-WPU CSE00370). Explore arrays, searching, sorting, linked lists, stacks, queues, trees, and graphs with tactile simulations.",
   openGraph: {
-    title: "Page Replacement Algorithms — FIFO vs LRU",
+    title: "DSA Visual Lab — Data Structures & Algorithms Using C",
     description:
-      "When memory runs out, which page should leave? An interactive exploration of FIFO and LRU.",
+      "Physical, tangible animations and step-by-step simulations of computer science fundamentals.",
     type: "website",
   },
   twitter: {
     card: "summary_large_image",
-    title: "Page Replacement Algorithms — FIFO vs LRU",
+    title: "DSA Visual Lab — Data Structures & Algorithms Using C",
     description:
-      "When memory runs out, which page should leave? An interactive exploration of FIFO and LRU.",
+      "Physical, tangible animations and step-by-step simulations of computer science fundamentals.",
   },
 };
 

@@ -2,9 +2,9 @@
 
 import React, { useState, useMemo } from 'react';
 import { motion, AnimatePresence } from 'motion/react';
-import { simulateFIFO, simulateLRU } from '@/lib/pageReplacement';
+import { simulateFIFO } from '@/lib/pageReplacement';
 import { sound } from '@/lib/sound';
-import { AlertCircle, RotateCcw, ChevronRight, ShieldCheck } from 'lucide-react';
+import { AlertCircle, RotateCcw } from 'lucide-react';
 
 const BELADY_STRING = [1, 2, 3, 4, 1, 2, 5, 1, 2, 3, 4, 5];
 

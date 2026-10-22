@@ -3,7 +3,6 @@
 import React, { useState } from 'react';
 import { motion, AnimatePresence } from 'motion/react';
 import { sound } from '@/lib/sound';
-import { Check, X, ArrowRight, RotateCcw } from 'lucide-react';
 
 interface QuizItem {
   id: number;

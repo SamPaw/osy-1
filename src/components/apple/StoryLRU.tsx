@@ -2,12 +2,10 @@
 
 import React, { useState, useEffect, useMemo, useRef, useCallback } from 'react';
 import { motion, AnimatePresence } from 'motion/react';
-import { simulateLRU, PRESETS, SimulationResult, parseReferenceString } from '@/lib/pageReplacement';
+import { simulateLRU, SimulationResult, parseReferenceString } from '@/lib/pageReplacement';
 import { sound } from '@/lib/sound';
 import {
   RotateCcw,
-  ChevronLeft,
-  ChevronRight,
   Play,
   Pause,
   Minus,
@@ -395,6 +393,18 @@ export function StoryLRU() {
           >
             Next Reference →
           </button>
+
+          <div className="flex items-center gap-1 bg-black/[0.04] dark:bg-white/[0.06] rounded-full p-1 border border-[var(--border)]">
+            {[1, 2].map((s) => (
+              <button
+                key={s}
+                onClick={() => setPlaybackSpeed(s)}
+                className={`px-2 py-0.5 rounded-full text-[10px] font-mono cursor-pointer ${playbackSpeed === s ? 'bg-white dark:bg-neutral-800 shadow-xs font-bold' : 'opacity-60'}`}
+              >
+                {s}x
+              </button>
+            ))}
+          </div>
         </div>
 
         {/* Minimal Statistics */}

@@ -4,24 +4,15 @@ import React, { useState, useMemo, useCallback } from 'react';
 import { motion, AnimatePresence } from 'motion/react';
 import { simulateFIFO, simulateLRU, PRESETS, SimulationResult } from '@/lib/pageReplacement';
 import { sound } from '@/lib/sound';
-import {
-  RotateCcw,
-  ChevronLeft,
-  ChevronRight,
-  Play,
-  Pause,
-  AlertTriangle,
-  GitCompare,
-} from 'lucide-react';
+import { RotateCcw, AlertTriangle } from 'lucide-react';
 
 export function StoryComparison() {
   // Use divergence preset: [2, 3, 2, 1, 5, 2, 4, 5, 3, 2, 5, 2]
   const divergencePreset = PRESETS.find((p) => p.id === 'divergence') || PRESETS[2];
 
-  const [referenceString, setReferenceString] = useState<number[]>(divergencePreset.referenceString);
-  const [frameCount, setFrameCount] = useState<number>(3);
+  const referenceString = divergencePreset.referenceString;
+  const frameCount = 3;
   const [currentStepIndex, setCurrentStepIndex] = useState<number>(-1);
-  const [isPlaying, setIsPlaying] = useState<boolean>(false);
 
   // Both simulations synchronously
   const fifoResult: SimulationResult = useMemo(
@@ -56,8 +47,6 @@ export function StoryComparison() {
     if (currentStepIndex < referenceString.length - 1) {
       setCurrentStepIndex((prev) => prev + 1);
       sound.click();
-    } else {
-      setIsPlaying(false);
     }
   }, [currentStepIndex, referenceString.length]);
 
@@ -71,7 +60,6 @@ export function StoryComparison() {
   }, [currentStepIndex]);
 
   const handleReset = useCallback(() => {
-    setIsPlaying(false);
     setCurrentStepIndex(-1);
     sound.click();
   }, []);
